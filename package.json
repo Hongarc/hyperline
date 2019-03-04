@@ -1,26 +1,21 @@
 {
-  "name": "hyperline",
-  "version": "1.2.0",
+  "name": "kiat-hyperline",
+  "version": "2.0.0-alpha",
   "description": "Handy status line for Hyper.app",
   "keywords": [
     "hyper.app",
     "hyper",
     "hyperterm"
   ],
-  "author": "Nick Tikhonov",
+  "author": "Hongarc",
   "contributors": [
-    {
-      "name": "Tim Neutkens"
-    },
-    {
-      "name": "Stefan Ivic"
-    },
-    {
-      "name": "Henrik Dahlheim"
-    }
+    "Nick Tikhonov",
+    "Tim Neutkens",
+    "Stefan Ivic",
+    "Henrik Dahlheim"
   ],
   "license": "MIT",
-  "repository": "hyperline/hyperline",
+  "repository": "Hongarc/hyperline",
   "main": "dist/hyperline.js",
   "files": [
     "dist/hyperline.js"
