@@ -1,17 +1,10 @@
-import moment from 'moment'
+const hour = 3600
+const day = 24 * hour;
 
 export default function formatUptime(uptime) {
-  const uptimeInHours = Number((uptime / 3600).toFixed(0))
+  const days = Math.floor(uptime / day)
+  const mod = Math.floor(uptime % day)
+  const hours = Math.floor(mod / hour)
 
-  if (uptimeInHours === 0) {
-    return '0h'
-  }
-
-  const uptimeInMoment = moment.duration(uptimeInHours, 'hours')
-  const days = uptimeInMoment.days()
-  const hours = uptimeInMoment.hours()
-  const daysFormatted = days ? days + 'd' : ''
-  const hoursFormatted = hours ? hours + 'h' : ''
-
-  return [daysFormatted, hoursFormatted].filter(Boolean).join(' ')
+  return `${days}d ${hours}h`
 }
