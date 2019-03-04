@@ -9,4 +9,8 @@ import battery from './battery'
 // Import Docker from './docker'
 import spotify from './spotify'
 
-export default [hostname, ip, memory, battery, cpu, network, spotify]
+const plugins =  [hostname, ip, memory, battery, cpu, network,];
+if (process.platform !== 'win32') {
+  plugins.push(spotify);
+}
+export default plugins
