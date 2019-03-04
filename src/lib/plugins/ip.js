@@ -1,12 +1,11 @@
 import React from 'react'
 import Component from 'hyper/component'
-import publicIp from 'public-ip'
+import fetch from 'node-fetch'
 import SvgIcon from '../utils/svg-icon'
 
 function getIp() {
-  return new Promise(resolve => {
-    publicIp.v4().then(ip => resolve(ip)).catch(() => resolve('?.?.?.?'))
-  })
+  return fetch('https://ipv4.icanhazip.com/').then(res => res.text())
+    .then(text => text.trim()).catch(() => '?.?.?.?')
 }
 
 class PluginIcon extends Component {
