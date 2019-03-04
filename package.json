@@ -26,7 +26,6 @@
     "dist/hyperline.js"
   ],
   "dependencies": {
-    "color": "^0.11.3",
     "left-pad": "^1.1.3",
     "node-fetch": "^2.3.0",
     "prop-types": "^15.5.10",
